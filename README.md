@@ -9,7 +9,11 @@ We started by looking through the provided data and identifying features that we
 We tried a few different models: linear regressions (Lasso, Ridge, and Elastic), Naive Bayes, Random Forest, and XG Boost. The classification models required us to bin arrival time, and when running linear regressions Ridge seemed to perform best. We ran regressions on both the binned data and on the continuous data, and the binned data performed better. The accuracy scores of the models hovered around 0.2-0.25 for our models, showing a limited amount of predictive power. Of all the models we tried, Random Forest performed best. For future improvements, integrating weather data would likely help improve accuracy, as would being able to find passenger data that is not aggregated by month, but instead provides information on each individual flight. Additionally, running stacked models would be something worth looking into.
 
 ### File Descriptions
-Cleaning Dataframes contains the notebooks that we use to get data from the SQL tables and clean them in pandas.
-Models contains the notebooks with our models, including different types of linear regressions and random forest.
-Rough contains some initial unorganized exploration of the SQL tables.
-SQL contains postgresql files with the relevant SQL queries.
+  -Cleaning Dataframes contains the notebooks that we use to get data from the SQL tables and clean them in pandas.
+  
+  -Models contains the notebooks with our models, including different types of linear regressions and random forest.
+  
+  -Rough contains some initial unorganized exploration of the SQL tables.
+
+  -SQL contains postgresql files with the relevant SQL queries.
+
