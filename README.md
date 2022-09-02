@@ -10,7 +10,7 @@ With the data in the passengers table being aggregated by month and sorted by ro
 
 We tried a few different models: linear regressions (Lasso, Ridge, and Elastic), Naive Bayes, Random Forest, and XG Boost. The classification models required us to bin arrival time, and when running linear regressions Ridge seemed to perform best. We ran regressions on both the binned data and on the continuous data, and the binned data performed better. The accuracy scores of the random forest model was ~0.72 when predicting solely whether or not a plane would be late, and around 0.2-0.25 for our models when predicting quartiles the minute delay would fall under.
 
-For future improvements, integrating weather data would likely help improve accuracy, as would being able to find passenger data that is not aggregated by month, but instead provides information on each individual flight. Additionally, running stacked models would be something worth looking into.
+For future improvements, integrating weather data that was pulled but not used would likely help improve accuracy, as would being able to find passenger data that is not aggregated by month, but instead provides information on each individual flight. Additionally, running stacked models would be something worth looking into.
 
 ### Notes of Model Output
 
