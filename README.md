@@ -17,6 +17,8 @@ For future improvements, integrating weather data would likely help improve accu
 The Output we looked to predict being the time was used by looking at the likely Quartile the Arrival Delay would fall under from a random forest model.  For 93% of the data the Quartiles are seperated by 3-10 minutes and can be classifed comfortably within those quartiles, however for the 10th quartile which makes up ~7% of our data, due to it containing right skewed outliers, can be anywhere from 30 minnutes to 80 hours, for this particular problem we would run our model after removing right skewed outliers to get a prediction closer to the rest of the dataset.  To adress this problem in our predictions if data falls within the 10th Quartile we assess it as being 30+ minutes late which. 
 
 ### File Descriptions
+  -Data Exploration looks at initial data distribution
+  
   -Cleaning Dataframes contains the notebooks that we use to get data from the SQL tables and clean them in pandas.
   
   -Models contains the notebooks with our models, including different types of linear regressions and random forest.
