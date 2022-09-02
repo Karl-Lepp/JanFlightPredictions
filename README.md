@@ -12,7 +12,7 @@ We tried a few different models: linear regressions (Lasso, Ridge, and Elastic),
 
 For future improvements, integrating weather data would likely help improve accuracy, as would being able to find passenger data that is not aggregated by month, but instead provides information on each individual flight. Additionally, running stacked models would be something worth looking into.
 
-#### Notes of Model Output
+### Notes of Model Output
 
 The Output we looked to predict being the time was used by looking at the likely Quartile the Arrival Delay would fall under from a random forest model.  For 93% of the data the Quartiles are seperated by 3-10 minutes and can be classifed comfortably within those quartiles, however for the 10th quartile which makes up ~7% of our data, due to it containing right skewed outliers, can be anywhere from 30 minnutes to 80 hours, for this particular problem we would run our model after removing right skewed outliers to get a prediction closer to the rest of the dataset.  To adress this problem in our predictions if data falls within the 10th Quartile we assess it as being 30+ minutes late which. 
 
