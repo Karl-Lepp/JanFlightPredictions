@@ -24,4 +24,8 @@ The Output we looked to predict being the time was used by looking at the likely
   -Rough contains some initial unorganized exploration of the SQL tables.
 
   -SQL contains postgresql files with the relevant SQL queries.
+  
+  -Predicting JanFlights is the jupyter file of pulling data and loading model to make our final prediction
+  
+  -Submission is our final csv prediction on how late planes will be for the Week of January 1st-7th
 
