@@ -8,13 +8,13 @@ With the data in the passengers table being aggregated by month and sorted by ro
 
 ### Step Two: Modeling and Future Improvements
 
-We tried a few different models: linear regressions (Lasso, Ridge, and Elastic), Naive Bayes, Random Forest, and XG Boost. The classification models required us to bin arrival time, and when running linear regressions Ridge seemed to perform best. We ran regressions on both the binned data and on the continuous data, and the binned data performed better. The accuracy scores of the models hovered around 0.2-0.25 for our models, showing a limited amount of predictive power.
+We tried a few different models: linear regressions (Lasso, Ridge, and Elastic), Naive Bayes, Random Forest, and XG Boost. The classification models required us to bin arrival time, and when running linear regressions Ridge seemed to perform best. We ran regressions on both the binned data and on the continuous data, and the binned data performed better. The accuracy scores of the random forest model was ~0.72 when predicting solely whether or not a plane would be late, and around 0.2-0.25 for our models when predicting quartiles the minute delay would fall under.
 
-Of all the models we tried, Random Forest performed best. For future improvements, integrating weather data would likely help improve accuracy, as would being able to find passenger data that is not aggregated by month, but instead provides information on each individual flight. Additionally, running stacked models would be something worth looking into.
+For future improvements, integrating weather data would likely help improve accuracy, as would being able to find passenger data that is not aggregated by month, but instead provides information on each individual flight. Additionally, running stacked models would be something worth looking into.
 
-### Notes of Model
+# Notes of Model Output
 
-The 
+The Output we looked to predict being the time was used by looking at the likely Quartile the Arrival Delay would fall under from a random forest model.  For 93% of the data the Quartiles are seperated by 3-10 minutes and can be classifed comfortably within those quartiles, however for the 10th quartile which makes up ~7% of our data, due to it containing right skewed outliers, can be anywhere from 30 minnutes to 80 hours, for this particular problem we would run our model after removing right skewed outliers to get a prediction closer to the rest of the dataset.  To adress this problem in our predictions if data falls within the 10th Quartile we assess it as being 30+ minutes late which. 
 
 ### File Descriptions
   -Cleaning Dataframes contains the notebooks that we use to get data from the SQL tables and clean them in pandas.
